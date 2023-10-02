@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,47 +18,77 @@
   </head>
   <body>
     <header>
-      <div class="background">
-        <img src="html/img/background.webp" alt="milkshake" />
-        <div class="content">
-          <nav>
-            <div class="nav_barre">
-              <a href="#"><h1>MILKSHAKE</h1></a>
-              <ul>
-                <li><a href="#">CATALOG</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">CONTACT</a></li>
-              </ul>
-              <section>
-                <a href="#"
-                  ><div class="panier">
-                    <div class="circle"></div>
-                    <i class="fa-solid fa-basket-shopping"></i></div
-                ></a>
-              </section>
-            </div>
-          </nav>
+      <nav class="nav_mobile">
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            ><i class="fa-solid fa-circle-arrow-left"></i
+          ></a>
+          <div class="overlay-content">
+            <a href="#">CATALOGUE</a>
+            <a href="#">À PROPOS</a>
+            <a href="#">CONTACT</a>
+          </div>
         </div>
-      </div>
+        <div class="burger" onclick="openNav()">
+          &#9776;
+          <h1>MILKSHAKE</h1>
+          <p>DYLAN LEFEBVRE</p>
+        </div>
+      </nav>
+      <nav class="nav_desktop">
+        <div class="nav_barre">
+          <a href="#"
+            ><h1>MILKSHAKE</h1>
+            <p>DYLAN LEFEBVRE</p></a
+          >
+          <ul>
+            <li><a href="#">CATALOGUE</a></li>
+            <li><a href="#">À PROPOS</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+          <section>
+            <a href="#">
+              <div class="panier">
+                <div class="circle"></div>
+                <i class="fa-solid fa-basket-shopping"></i>
+              </div>
+            </a>
+          </section>
+        </div>
+      </nav>
     </header>
     <main>
+      <div class="background">
+        <img src="html/img/background.webp" alt="milkshake" />
+      </div>
       <section>
         <div class="container_text">
-          <h2>MILKSHAKE WITH TASTE OF LOVE</h2>
+          <h2>MILKSHAKE AVEC GOÛT D'AMOUR</h2>
           <p>
-            The refreshing sourness of strawberries enhances the delicate
-            sweetness of whithe chocolate and brings unforgettable pleasure.
+            L'acidité rafraîchissante des fraises rehausse la douceur délicate
+            du chocolat blanc et procure un plaisir inoubliable.
           </p>
         </div>
       </section>
       <section>
         <a href="#"
           ><div class="btn">
-            <div>GO TO SHOP</div>
+            <div>ALLER À LA BOUTIQUE</div>
             <i class="fa-solid fa-circle-chevron-right"></i></div
         ></a>
       </section>
     </main>
     <footer></footer>
+
+    <script defer>
+      // Nav barre mobile
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+    </script>
   </body>
 </html>
